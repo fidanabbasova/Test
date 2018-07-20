@@ -1,0 +1,156 @@
+nav {
+	@media screen and (min-width: 768px){
+		.navbar-nav {
+			float: none;
+			margin: 0 auto;
+			display: block;
+			text-align: center;
+			li {
+				display: inline-block !important;
+				float: none !important;
+				margin-right: 10px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+#carouselHeader {
+	.carousel-inner {
+		max-height: 620px;
+		img {
+			width: 100%;
+			@media screen and (max-width: 880px){
+				width: auto;
+				height: 100%;
+			}
+		}
+	}
+	.search {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 4;
+		width: 100%;
+		@extend %flex;
+		align-items: center;
+		justify-content: center;
+		form {
+			padding: 30px;
+			background: rgba($color: ($dark-color), $alpha: 0.7);
+			@include border-radius(10px);
+			label {
+				text-transform: capitalize;
+				font-weight: 700;
+				color: $light-color;
+			}
+			#priceFrom {
+				float: left;
+
+			}
+		}
+
+	}
+	.carousel-control-prev, .carousel-control-next {
+		z-index: 10;
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
+	}
+}
+#events {
+	@include horizontal-padding(60px);
+	h1 {
+		@include horizontal-padding(50px);
+	}
+	figure {
+		.figure-caption {
+			height: 150px;
+			overflow: hidden;
+			a {
+				color: $dark-color;
+				font-size: 1.5em !important;
+				display: inline-block;
+				@include horizontal-padding(10px);
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .6s ease;
+			background-color: rgba($color: $warm-color, $alpha: 0.6);
+		}
+		.square:hover {
+			.overlay {
+				opacity: 1;
+			}
+			img {
+				transform: scale(1.2);
+				transition: 1s ease;
+			}
+		}
+		.more {
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+		}
+	}
+}
+
+footer {
+	background: #B3B3B3; 
+	padding-top: 30px;
+	padding-bottom: 50px }
+	footer .fa {
+	font-size: 15px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%; }
+	footer .fa:hover {
+	color: #FFF;
+	text-decoration: none; }
+	footer .fa-facebook {
+	background: #3B5998;
+	color: white;
+	margin-left: 5px; }
+	footer .fa-google {
+	background: #dd4b39;
+	color: white;
+	margin-left: 5px; }
+	footer .fa-linkedin {
+	background: #007bb5;
+	color: white;
+	margin-left: 5px; }
+	footer address {
+	margin-bottom: 0; }
+	footer address span {
+	display: block;
+	font-size: 1.2em; }
+	footer address span a {
+	color: #333; }
+	footer address span a:hover {
+	color: #333;
+	text-decoration: none; }
+	footer address span i {
+	color: #555; }
+	footer address .address i {
+	margin-left: 0.225em;
+	margin-right: 0.225em; }
+	footer address .phone i {
+	margin-right: 0.15em; }

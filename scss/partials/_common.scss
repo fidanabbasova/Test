@@ -1,0 +1,51 @@
+$dark-color: #333333;
+$light-color: #FFFFFF;
+$cool-color: #00A2B9;
+$warm-color: #D07D18;
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+@mixin horizontal-padding($padding) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+%flex {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+%poly {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.left-poly {
+    @extend %poly;
+    border-color: transparent transparent transparent $light-color; 
+    border-width: 80px 0px 0px calc( 100vw / 2 );
+}
+.right-poly {
+    @extend %poly;
+    right: 0px;
+    border-color: transparent transparent $light-color;
+    border-width: 0px 0px 80px calc( 100vw / 2 );
+}
+.poly-container{
+    position: relative;
+    top: -80px;
+}
+.square {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
